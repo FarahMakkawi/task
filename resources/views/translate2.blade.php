@@ -16,20 +16,16 @@
 
 {{-- {{App::getlocale()}} --}}
 
-
-
 <p class="text-center">{{ trans('product.l') }}</p>
 <p class="text-center">{{ trans('product.subject') }}</p>
 
-
-
 <br><br><br>
     
-<a href="{{route('translate1')}}"  class="btn btn-info">translate</a>
+<a href="{{route('translate1')}}"  class="btn btn-info">translate to {{session()->get('locale')}}</a>
+
 
 
 {{-- session
 midlwair
 route --}}
 
-{{-- بعمل ميدل وير فيو لانغيويج  --}}

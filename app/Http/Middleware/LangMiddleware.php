@@ -22,7 +22,6 @@ class LangMiddleware
         }
        
 
-
         return $next($request);
     }
 }

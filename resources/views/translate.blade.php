@@ -11,7 +11,7 @@
     
     <h1>translate</h1>
     
-    
+
 
     <p class="text-center">{{ trans('product.l') }}</p>
     <p class="text-center">{{ trans('product.subject') }}</p>
@@ -19,7 +19,7 @@
     
     <br><br><br>
     
-    <a href="{{route('translate2')}}"  class="btn btn-info">translate to {{session()->get('locale')}}</a>
+   <a href="{{route('translate2')}}"  class="btn btn-info">translate </a>
 
 
 </body>

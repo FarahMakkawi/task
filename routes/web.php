@@ -43,22 +43,14 @@ Route::get('index2',[UserController::class,'index2'])->name('index2');
 
 
 Route::middleware('lang')->get('/translate',function(){
-//     $lang=app()->getLocale();
-//  if($lang == Config::get('lang.available_lang','English')){
-//         session()->put('locale', $lang);
-//         App::setLocale(Config::get('lang.available_lang.Arabic'));
-//     }
-  
 
-$locale = App::currentLocale();
- 
 if (App::isLocale(Config::get('lang.available_lang.English'))) {
-    session()->put('locale',$locale);
+    session()->put('locale','ar');
     app()->setLocale(Config::get('lang.available_lang.Arabic'));
 }
 else{
-    session()->put('locale', Config::get('lang.available_lang.Arabic'));
-    app()->setLocale(Config::get('lang.available_lang.Arabic'));
+    session()->put('locale', 'en');
+    app()->setLocale(Config::get('lang.available_lang.English'));
 }
 return view('translate');
 
